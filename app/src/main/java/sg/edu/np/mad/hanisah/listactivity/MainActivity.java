@@ -17,6 +17,7 @@ public class MainActivity extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        //Creating the alert
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
 
         builder.setTitle("Profile");
@@ -32,10 +33,10 @@ public class MainActivity extends AppCompatActivity
                 //Generate random int value from 0 to 100
                 int random_int = (int)Math.floor(Math.random()*(max-min+1)+min);
 
+                //transferring data to next activity
                 Intent activityName = new Intent(MainActivity.this, PracWeek2.class);
                 activityName.putExtra("RandomInt", random_int);
                 startActivity(activityName);
-
                 //setContentView(R.layout.pracweek2);
             }
         });
@@ -46,6 +47,7 @@ public class MainActivity extends AppCompatActivity
             }
         });
 
+        //making the img interactable
         ImageView img = findViewById(R.id.imageView4);
         img.setOnClickListener(new View.OnClickListener()
         {
