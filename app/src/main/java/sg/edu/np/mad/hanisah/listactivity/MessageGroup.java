@@ -25,7 +25,7 @@ public class MessageGroup extends AppCompatActivity {
                 FragmentManager fragmentManager = getSupportFragmentManager();
                 FragmentTransaction ft = fragmentManager.beginTransaction();
                 Group1 group1 = new Group1();
-                ft.add(R.id.placeholder, group1);
+                ft.replace(R.id.placeholder, group1);
                 ft.commit();
             }
         });
@@ -39,7 +39,7 @@ public class MessageGroup extends AppCompatActivity {
                 FragmentManager fragmentManager = getSupportFragmentManager();
                 FragmentTransaction ft = fragmentManager.beginTransaction();
                 Group2 group2 = new Group2();
-                ft.add(R.id.placeholder, group2);
+                ft.replace(R.id.placeholder, group2);
                 ft.commit();
             }
         });
